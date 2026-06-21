@@ -1,0 +1,28 @@
+/**
+ * ============================================================================
+ * FORA DO RADAR - Estilos da Página de Clubes (Lista)
+ * ============================================================================
+ */
+
+/* Grelha de clubes */
+.clubes-grid {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-12);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .clubes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .clubes-grid {
+        grid-template-columns: 1fr;
+    }
+}

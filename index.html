@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!--
+    ============================================================================
+    FORA DO RADAR - Página Inicial v2.0
+    ============================================================================
+    Design melhorado com animações e sistema de login unificado.
+    ============================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORa Do Radar - Descubre clubes desconhecidos</title>
+    <meta name="description" content="Descubre clubes de futebol de todo o mundo que o mundo ainda não conhece.">
+    <meta name="keywords" content="futebol, clubes, ligas, países, unknown clubs, football, soccer">
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!--
+    ============================================================================
+    HEADER / NAVEGAÇÃO
+    ============================================================================
+    -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="/index.html" class="logo">
+                <span class="logo-icon">⚽</span>
+                <span class="logo-text">FORA DO RADAR</span>
+            </a>
+
+            <!-- Menu Mobile Toggle -->
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+                <span>☰</span>
+            </button>
+
+            <!-- Navegação -->
+            <nav id="nav-links" class="nav-links">
+                <a href="/index.html" class="nav-link active">Início</a>
+                <a href="/pages/paises.html" class="nav-link">Países</a>
+            </nav>
+
+            <!-- Botão de Autenticação Unificado -->
+            <div class="auth-container">
+                <button class="auth-btn">
+                    <span class="auth-btn-icon">👤</span>
+                    <span>Entrar</span>
+                </button>
+                <div class="auth-dropdown">
+                    <a href="/pages/login.html" class="auth-dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                            <polyline points="10 17 15 12 10 7"></polyline>
+                            <line x1="15" y1="12" x2="3" y2="12"></line>
+                        </svg>
+                        Iniciar Sessão
+                    </a>
+                    <div class="auth-dropdown-divider"></div>
+                    <a href="/pages/register.html" class="auth-dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <line x1="20" y1="8" x2="20" y2="14"></line>
+                            <line x1="23" y1="11" x2="17" y2="11"></line>
+                        </svg>
+                        Criar Conta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--
+    ============================================================================
+    CONTEÚDO PRINCIPAL
+    ============================================================================
+    -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-left">
+                <h1 class="main-title">
+                    FORA DO<br>
+                    <span class="highlight">RADAR</span>
+                </h1>
+                <p class="main-subtitle">
+                    Descubre clubes que o mundo ainda não conhece.
+                </p>
+                <p class="main-description">
+                    Explore centenas de clubes de futebol de países pouco conhecidos.
+                    Dos confins da Europa às profundezas de África, do calor da América
+                    do Sul ao deserto da Ásia - há um mundo de futebol esperando por você.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="/pages/paises.html" class="btn-primary">
+                        🌍 Explorar países
+                    </a>
+                </div>
+            </div>
+
+            <!-- Clube Aleatório -->
+            <div class="hero-right">
+                <div id="random-club-container" class="random-club-container">
+                    <div class="random-club-card">
+                        <div class="loading-skeleton">
+                            <div class="skeleton emblem"></div>
+                            <div class="skeleton text"></div>
+                            <div class="skeleton text short"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estatísticas -->
+        <section class="stats-section">
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Continentes</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">35+</span>
+                <span class="stat-label">Países</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">38</span>
+                <span class="stat-label">Ligas</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Clubes</span>
+            </div>
+        </section>
+
+        <!-- Preview -->
+        <section class="preview-section">
+            <h2 class="section-title">O que você pode descobrir</h2>
+
+            <div class="preview-grid">
+                <div class="preview-card">
+                    <span class="preview-icon">🌍</span>
+                    <h3>Países Inesperados</h3>
+                    <p>Desde San Marino até Bangladesh, explore o futebol em lugares que você nunca imaginou.</p>
+                </div>
+
+                <div class="preview-card">
+                    <span class="preview-icon">🏆</span>
+                    <h3>Ligas Locais</h3>
+                    <p>Conheça as competições nacionais que movem milhões de torcedores em todo o mundo.</p>
+                </div>
+
+                <div class="preview-card">
+                    <span class="preview-icon">⚽</span>
+                    <h3>Clubes Fascinantes</h3>
+                    <p>Descubra histórias de clubes centenários e equipes que desafiam as probabilidades.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--
+    ============================================================================
+    FOOTER
+    ============================================================================
+    -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p class="footer-logo">
+                    <span class="logo-icon">⚽</span>
+                    FORA DO RADAR
+                </p>
+                <p class="footer-tagline">
+                    Descubre clubes que o mundo ainda não conhece
+                </p>
+            </div>
+            <div class="footer-credits">
+                <p>&copy; 2024 FORA DO RADAR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificação -->
+    <div class="notification"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

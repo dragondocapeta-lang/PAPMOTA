@@ -1,0 +1,22 @@
+/**
+ * ============================================================================
+ * FORA DO RADAR - Estilos da Página de Ligas
+ * ============================================================================
+ */
+
+/* Grelha de ligas */
+.ligas-grid {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-12);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .ligas-grid {
+        grid-template-columns: 1fr;
+    }
+}

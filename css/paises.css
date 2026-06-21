@@ -1,0 +1,62 @@
+/**
+ * ============================================================================
+ * FORA DO RADAR - Estilos da Página de Países
+ * ============================================================================
+ */
+
+/* Cabeçalho da página */
+.page-header {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    text-align: center;
+}
+
+.page-title {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    margin-bottom: var(--space-2);
+    color: var(--text-primary);
+}
+
+.page-subtitle {
+    font-size: var(--text-lg);
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Container de filtros */
+.filters-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-6);
+}
+
+/* Grelha de países */
+.paises-grid {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--space-6) var(--space-12);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .paises-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .paises-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .paises-grid {
+        grid-template-columns: 1fr;
+    }
+}

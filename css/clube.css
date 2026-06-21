@@ -1,0 +1,385 @@
+/**
+ * ============================================================================
+ * FORA DO RADAR - Página do Clube v2.0
+ * ============================================================================
+ */
+
+.clube-page {
+    padding-bottom: var(--space-16);
+}
+
+.clube-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    animation: fadeUp 0.6s ease-out;
+}
+
+.clube-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-12) var(--space-8);
+    background: var(--gradient-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-2xl);
+    margin-bottom: var(--space-8);
+    position: relative;
+    overflow: hidden;
+}
+
+.clube-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+}
+
+.clube-emblem-large {
+    font-size: 7rem;
+    margin-bottom: var(--space-6);
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+.clube-header-info {
+    width: 100%;
+}
+
+.clube-nome-principal {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    margin-bottom: var(--space-3);
+    color: var(--text-primary);
+}
+
+.clube-localizacao {
+    font-size: var(--text-lg);
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.clube-detalhes {
+    background: var(--gradient-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.clube-detalhes h2 {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.detalhes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+}
+
+.detalhe-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.detalhe-item:hover {
+    background: rgba(0, 255, 136, 0.05);
+    transform: translateX(5px);
+}
+
+.detalhe-icon {
+    font-size: var(--text-2xl);
+}
+
+.detalhe-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.detalhe-label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.detalhe-value {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.clube-descricao {
+    background: var(--gradient-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.clube-descricao h2 {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-4);
+}
+
+.descricao-texto {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.clube-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+.skeleton-loader {
+    padding: var(--space-8);
+}
+
+.skeleton-loader .skeleton.emblem-large {
+    width: 120px;
+    height: 120px;
+    margin: var(--space-8) auto;
+    border-radius: 50%;
+}
+
+.skeleton-loader .skeleton.detalhe-item {
+    width: 100%;
+    height: 70px;
+}
+
+@media (max-width: 768px) {
+    .clube-nav {
+        flex-direction: column;
+    }
+
+    .detalhes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .camisolas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================================================
+   NOVAS SECÇÕES DO CLUBE
+   ============================================================================ */
+
+.clube-escudo-img {
+    width: 7rem;
+    height: 7rem;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+.clube-fundacao {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-4);
+    background: var(--gradient-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-6) var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.fundacao-icon {
+    font-size: var(--text-3xl);
+}
+
+.fundacao-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.fundacao-label {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.fundacao-value {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.clube-estadio,
+.clube-conquistas,
+.clube-camisolas {
+    background: var(--gradient-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.clube-estadio h2,
+.clube-conquistas h2,
+.clube-camisolas h2 {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.estadio-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.estadio-foto,
+.estadio-foto-placeholder {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+}
+
+.estadio-foto-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.estadio-info h3 {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-2);
+}
+
+.estadio-cidade {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.conquistas-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.conquista-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.conquista-item:hover {
+    background: rgba(0, 255, 136, 0.05);
+}
+
+.conquista-ano {
+    min-width: 60px;
+    font-weight: 800;
+    color: var(--color-primary);
+    font-size: var(--text-lg);
+}
+
+.conquista-info strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.conquista-info p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+}
+
+.camisolas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--space-6);
+}
+
+.camisola-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    transition: transform var(--transition-base);
+}
+
+.camisola-card:hover {
+    transform: translateY(-5px);
+}
+
+.camisola-card img,
+.camisola-placeholder {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.camisola-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.camisola-info {
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.camisola-tipo {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.camisola-temporada {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+.sem-dados {
+    color: var(--text-muted);
+    font-style: italic;
+}
